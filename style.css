@@ -1,0 +1,254 @@
+body {
+  margin-top: 10px;
+  font-family: 'Quicksand';
+  text-align: center;
+  background-color: #fff0f6;
+  color: #333;
+}
+
+#mainLayout {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 30px;
+  align-items: start;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+h1 {
+  color: pink;
+  -webkit-text-stroke: 1px hotpink;
+  font-weight: 700;
+  font-size: 75px; 
+}
+
+button {
+  background-color: #d3f7fb;
+  color: rgb(126, 66, 124);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Quicksand';
+}
+
+button:hover {
+  background-color: #a7dfe9;
+}
+
+canvas {
+  border: 10px solid #8B4513;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  background-color: white;
+  display: block;
+  margin: 0 auto;
+}
+
+#legend {
+  width: 150px;
+  max-height: 400px;
+  overflow-y: auto;
+  text-align: left;
+  background: #ffe6f0;
+  border: 2px solid pink;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+#legend h3 {
+  margin-top: 0;
+}
+
+#legendTitle {
+  background: #ffafcc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+#legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#legend li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#legend li span {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+#canvasWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+#canvasContainer {
+  margin-top: 5px;
+}
+
+#controlsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  text-align: center;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+#instructions {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  max-width: 250px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+#controls button {
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: #ffafcc;
+  color: #5a294f;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-family: 'Quicksand';
+  cursor: pointer;
+}
+
+#controls button:hover {
+  background-color: #ffc8dd;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+}
+
+#legend::-webkit-scrollbar {
+  width: 10px;
+}
+
+#legend::-webkit-scrollbar-track {
+  background: #ffe6f0;
+  border-radius: 10px;
+}
+
+#legend::-webkit-scrollbar-thumb {
+  background-color: #ffafcc;
+  border-radius: 10px;
+  border: 2px solid #ffe6f0;
+}
+
+#legend {
+  scrollbar-width: thin;
+  scrollbar-color: #ffafcc #ffe6f0;
+  margin-left: 200px;
+
+}
+
+#inputString {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: 2px solid #ffafcc;
+  border-radius: 10px;
+  background-color: #fff0f6;
+  color: #5a294f;
+  width: 250px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 175, 204, 0.6);
+}
+
+#inputString:focus {
+  border-color: #d36fa3;
+  box-shadow: 0 0 10px rgba(211, 111, 163, 0.8);
+}
+
+/* Header container to center title, input, and button with spacing */
+#header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Make sure the h1 has a bottom margin so it’s spaced from input/button */
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Align input and button horizontally with spacing */
+#header input {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: 2px solid #ffafcc;
+  border-radius: 10px;
+  background-color: #fff0f6;
+  color: #5a294f;
+  width: 250px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 0 5px rgba(255, 175, 204, 0.6);
+  margin-right: 10px; /* space between input and button */
+}
+
+#header input:focus {
+  border-color: #d36fa3;
+  box-shadow: 0 0 10px rgba(211, 111, 163, 0.8);
+}
+
+#header button {
+  background-color: #d3f7fb;
+  color: rgb(126, 66, 124);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#header button:hover {
+  background-color: #a7dfe9;
+}
+

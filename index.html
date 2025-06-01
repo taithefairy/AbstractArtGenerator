@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abstract Art Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <div id="header">
+    <h1>Art Generator</h1>
+    <input id="inputString" placeholder="Type any letter or number" />
+    <button onclick="generate()">Generate</button>
+  </div>
+
+  <div id="mainLayout">
+    <div id="legend">
+      <h3 id="legendTitle">Legend</h3>
+      <ul>
+        <li><span class="legend-color" style="background:#ffafcc;"></span> 0</li>
+        <li><span class="legend-color" style="background:#fce1e4;"></span> 1</li>
+        <li><span class="legend-color" style="background:#f8c3cd;"></span> 2</li>
+        <li><span class="legend-color" style="background:#e8b7d4;"></span> 3</li>
+        <li><span class="legend-color" style="background:#d0bdf4;"></span> 4</li>
+        <li><span class="legend-color" style="background:#e2f0cb;"></span> 5</li>
+        <li><span class="legend-color" style="background:#ffe0ac;"></span> 6</li>
+        <li><span class="legend-color" style="background:#ffc8dd;"></span> 7</li>
+        <li><span class="legend-color" style="background:#ffafcc;"></span> 8</li>
+        <li><span class="legend-color" style="background:#f9a8d4;"></span> 9</li>
+        <li><span class="legend-color" style="background:#fce1e4;"></span> A</li>
+        <li><span class="legend-color" style="background:#f8c3cd;"></span> B</li>
+        <li><span class="legend-color" style="background:#e8b7d4;"></span> C</li>
+        <li><span class="legend-color" style="background:#d0bdf4;"></span> D</li>
+        <li><span class="legend-color" style="background:#e2f0cb;"></span> E</li>
+        <li><span class="legend-color" style="background:#ffe0ac;"></span> F</li>
+        <li><span class="legend-color" style="background:#ffc8dd;"></span> G</li>
+        <li><span class="legend-color" style="background:#ffafcc;"></span> H</li>
+        <li><span class="legend-color" style="background:#f9a8d4;"></span> I</li>
+        <li><span class="legend-color" style="background:#f2b5e3;"></span> J</li>
+        <li><span class="legend-color" style="background:#ffb3ba;"></span> K</li>
+        <li><span class="legend-color" style="background:#ffd6e8;"></span> L</li>
+        <li><span class="legend-color" style="background:#fab1a0;"></span> M</li>
+        <li><span class="legend-color" style="background:#f7c59f;"></span> N</li>
+        <li><span class="legend-color" style="background:#d3a1f9;"></span> O</li>
+        <li><span class="legend-color" style="background:#c3a4f9;"></span> P</li>
+        <li><span class="legend-color" style="background:#b89ff9;"></span> Q</li>
+        <li><span class="legend-color" style="background:#ff9ca0;"></span> R</li>
+        <li><span class="legend-color" style="background:#f4a8a8;"></span> S</li>
+        <li><span class="legend-color" style="background:#d2a5e1;"></span> T</li>
+        <li><span class="legend-color" style="background:#ffa8b6;"></span> U</li>
+        <li><span class="legend-color" style="background:#f7b2d2;"></span> V</li>
+        <li><span class="legend-color" style="background:#f0b2f9;"></span> W</li>
+        <li><span class="legend-color" style="background:#ebb0f9;"></span> X</li>
+        <li><span class="legend-color" style="background:#f3b3ca;"></span> Y</li>
+        <li><span class="legend-color" style="background:#f2a7d1;"></span> Z</li>
+      </ul>
+    </div>
+
+    <div id="canvasWrapper">
+      <div id="canvasContainer"></div>
+    </div>
+
+    <div id="controlsWrapper">
+      <div id="controls">
+        <button onclick="downloadArt()">Download Art</button>
+        <p id="instructions">Type letters & numbers to generate colorful shapes! Click Generate or Download your artwork.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="sketch.js"></script>
+</body>
+</html>
